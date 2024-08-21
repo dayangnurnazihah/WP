@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>BMI Calculator</title>
+    <link rel="stylesheet" href="tools.css">
+    <link rel="stylesheet" href="style.css">
+
+
+    <style>
+        .container {
+            display: flex;
+        }
+        .box {
+            margin-right: 20px;
+        }
+    </style>
+    <script>
+        function calculateBMI() {
+            var height = parseFloat(document.getElementById("height").value);
+            var weight = parseFloat(document.getElementById("weight").value);
+            var BMI = weight / (height ** 2);
+            var status = "";
+            var color = "";
+
+            if (BMI < 18.5) {
+                status = "Wasted/Underweight";
+                color = "blue";
+            } else if (BMI >= 18.5 && BMI <= 24.9) {
+                status = "Normal";
+                color = "green";
+            } else if (BMI >= 25 && BMI <= 29.9) {
+                status = "Overweight";
+                color = "yellow";
+            } else if (BMI >= 30 && BMI <= 39.9) {
+                status = "Obese";
+                color = "orange";
+            } else {
+                status = "Extremely Obese";
+                color = "red";
+            }
+
+            document.getElementById("result").innerHTML = "Your BMI: " + BMI.toFixed(2) + " - " + status;
+            document.getElementById("result").style.backgroundColor = color;
+        }
+    </script>
+</head>
+<body>
+
+    <div class="menu">
+        <br><br><br><br>
+        <ul>
+            <li><a href="Main.html">Home</a></li>
+            <li><a href="PersonalInfo.html">Personal Info</a></li>
+            <li><a href="CV.html">CV</a></li>
+            <li><a href="Tools.html">Tools</a></li>
+            
+        </ul>
+    </div>
+
+    <h1>BMI Calculator</h1>
+    <div class="container">
+        <div class="box">
+            <form>
+                Height (m): <input type="text" id="height"> <br><br>
+                Weight (kg): <input type="text" id="weight"> <br><br>
+                <input type="button" onclick="calculateBMI()" value="Calculate"> <br> <br>
+            </form>
+            <div id="result"></div>
+        </div>
+        <div class="box">
+            <img src="bmi.png" style="width:300px; height: inherit;">
+        </div>
+    </div>
+</body>
+</html>

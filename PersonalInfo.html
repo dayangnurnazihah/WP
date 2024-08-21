@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function toggleDropdown(id) {
+            var dropdownList = document.getElementById(id);
+            dropdownList.classList.toggle("show");
+        }
+    </script>
+</head>
+
+<body>
+
+    <header></header>
+
+    <div class="menu">
+        <br><br><br><br>
+        <ul>
+            <li><a href="Main.html">Home</a></li>
+            <li><a href="PersonalInfo.html">Personal Info</a></li>
+            <li><a href="CV.html">CV</a></li>
+            <li><a href="Tools.html">Tools</a></li>
+            
+        </ul>
+    </div>
+
+<div class="containerimg">
+    <img src="tofu.JPG" style="width: 240px; height: 240px;">
+    <img src="ziha.JPG" style="width: 240px; height: 240px;">
+    <img src="wte.JPG" style="width: 240px; height: 240px;">
+</div>
+
+<div class="container">
+    <div class="box1">
+        <p>⋆𐙚₊˚⊹♡</p>
+    </div>
+    <div class="box1">
+        <p> ₊✩‧₊˚౨ৎ˚₊✩‧₊</p>
+    </div>
+</div>
+
+<div class="container">
+    <div class="dropdown">
+        <button onclick="toggleDropdown('dropdownList1')">｡‧˚ʚ something about me ɞ˚‧｡</button>
+        <ul id="dropdownList1">
+            <li>Birthday : 14 July 2004</li>
+            <li>Born in Kuala Lumpur</li>
+            <li>Languages known
+                <ol>
+                    <li>Malay</li>
+                    <li>English</li>
+                    <li>Chinese</li>
+                    <li>French</li>
+                </ol>
+            </li>
+        </ul>
+    </div>
+
+    <div class="dropdown">
+        <button onclick="toggleDropdown('dropdownList2')">｡‧˚ʚ student information ɞ˚‧｡</button>
+        <ul id="dropdownList2">
+            <li>Matric Number: A22DW0255</li>
+            <li>2 DDWD 38</li>
+            <li>Work Email: dayangnurnazihah.m@gmail.com</li>
+            
+        </ul>
+    </div>
+</div>
+<br><br><br><br><br>
+<div class="container">
+    <div class="dropdown">
+        <button onclick="toggleDropdown('dropdownList3')">｡‧˚ʚ education ɞ˚‧｡</button>
+        <ul id="dropdownList3">
+            <li>SJK(C)Serdang Baru 2</li>
+            <li>SMK Seri Serdang</li>
+            <li>Universiti Teknologi Malaysia (ongoing)</li>
+        </ul>
+    </div>
+
+    <div class="dropdown">
+        <button onclick="toggleDropdown('dropdownList4')">｡‧˚ʚ academic achievements ɞ˚‧｡</button>
+        <ul id="dropdownList4">
+            <li>UPSR: 2A 4B 2C</li>
+            <li>SPM: 3A+ 2A 1A- 1B+ 1B 1C+</li>
+            <li>CGPA: 3.98</li>
+            
+        </ul>
+    </div>
+</div>
+
+</body>
+</html>

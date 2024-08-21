@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Calculator</title>
+        <link rel="stylesheet" href="tools.css">
+        <link rel="stylesheet" href="style.css">
+
+        <script>
+            function add(){
+                var no1 = parseInt(document.getElementById("no1").value); 
+                var no2 = parseInt(document.getElementById("no2").value); 
+                var res = no1 + no2;
+                document.getElementById("demo").innerHTML = "Result is: "+res.toString();
+            }
+            function subtract(){
+                var no1 = parseInt(document.getElementById("no1").value); 
+                var no2 = parseInt(document.getElementById("no2").value); 
+                var res = no1 - no2;
+                document.getElementById("demo").innerHTML = "Result is: "+res.toString();
+            }
+            function multiply(){
+                var no1 = parseInt(document.getElementById("no1").value); 
+                var no2 = parseInt(document.getElementById("no2").value); 
+                var res = no1 * no2;
+                document.getElementById("demo").innerHTML = "Result is: "+res.toString();
+            }
+            function divide(){
+                var no1 = parseInt(document.getElementById("no1").value); 
+                var no2 = parseInt(document.getElementById("no2").value); 
+                var res = no1 / no2;
+                document.getElementById("demo").innerHTML = "Result is: "+res.toString();
+            }
+            function clearCalc() {
+            document.getElementById("no1").value = "";
+            document.getElementById("no2").value = "";
+
+            document.getElementById("demo").innerHTML = "";
+            }
+        </script>
+
+    </head>
+
+
+    <body>
+
+        <div class="menu">
+            <br><br><br><br>
+            <ul>
+                <li><a href="Main.html">Home</a></li>
+                <li><a href="PersonalInfo.html">Personal Info</a></li>
+                <li><a href="CV.html">CV</a></li>
+                <li><a href="Tools.html">Tools</a></li>
+                
+            </ul>
+        </div>
+
+        <h1>Simple Calculator</h1> <hr> <br>
+        <form>
+            first number: 
+            <input type = "text" id="no1">
+            <br>
+            <br>
+            second number: 
+            <input type = "text" id="no2">
+            <br>
+            <br>
+
+            
+                    <input type="button" onclick="add()"  value="Add">
+                  
+                    <input type="button" onclick="subtract()" value="Subtract">
+                  
+                    <input type="button" onclick="multiply()" value="Multiply">
+                  
+                    <input type="button" onclick="divide()" id="tot" value="Divide">
+                   
+                    <input type="button" onclick="clearCalc()" value="Clear">
+<br>
+<br>
+                    <div id="demo"></div> 
+        </form>
+    </body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Unit Converter</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="tools.css">
+</head>
+<body>
+
+<div class="menu">
+    <br><br><br><br>
+    <ul>
+        <li><a href="Main.html">Home</a></li>
+        <li><a href="PersonalInfo.html">Personal Info</a></li>
+        <li><a href="CV.html">CV</a></li>
+        <li><a href="Tools.html">Tools</a></li>
+    </ul>
+</div>
+
+<h1>Unit Converter</h1>
+<hr><br>
+<form>
+    Input Value: 
+    <input type="text" id="inputValue"><br><br>
+    <button onclick="convert('cmToM')">cm to m</button>
+    <button onclick="convert('mToCM')">m to cm</button>
+    <button onclick="convert('mToKM')">m to km</button>
+    <button onclick="convert('kmToM')">km to m</button>
+    <button onclick="convert('cToF')">celsius to fahrenheit</button>
+    <br><br>
+</form>
+<div id="result"></div>
+
+<script>
+    function convert(type) {
+        event.preventDefault(); 
+        
+        var inputValue = parseFloat(document.getElementById("inputValue").value);
+        var result;
+        var unit;
+
+        switch (type) {
+            case 'cmToM':
+                result = inputValue / 100;
+                unit = "m";
+                document.getElementById("result").innerHTML = "Result: " + result + " " + unit;
+                break;
+            case 'mToCM':
+                result = inputValue * 100;
+                unit = "cm";
+                document.getElementById("result").innerHTML = "Result: " + result + " " + unit;
+                break;
+            case 'mToKM':
+                result = inputValue / 1000;
+                unit = "km";
+                document.getElementById("result").innerHTML = "Result: " + result + " " + unit;
+                break;
+            case 'kmToM':
+                result = inputValue * 1000;
+                unit = "m";
+                document.getElementById("result").innerHTML = "Result: " + result + " " + unit;
+                break;
+            case 'cToF':
+                result = (inputValue * (9 / 5)) + 32;
+                unit = "°F";
+                document.getElementById("result").innerHTML = "Result: " + result + " " + unit;
+                break;
+            default:
+                break;
+        }
+
+        alert("Result is: " + result + " " + unit);
+    }
+</script>
+
+</body>
+</html>

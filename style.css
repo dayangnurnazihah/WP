@@ -1,0 +1,155 @@
+body {
+    height: 100%;
+    margin: 0;
+    background-color: rgb(230, 233, 234);
+    justify-content: center;
+    align-items: center;
+    
+}
+
+header {
+    background-color: #bdbdbd; 
+    padding: 50px; 
+    margin-bottom: 10px;
+}
+
+.container {
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+    height: 100%; 
+}
+
+.containerimg {
+    text-align: center; 
+}
+
+.containerimg img {
+    margin: 5px; 
+    max-width: 100%; 
+}
+.box1 {
+    width: 300px; 
+    height: 45px;
+    background-color: lightslategray;
+    margin: 30px; 
+    text-align: center;
+}
+
+.box {
+    margin-top: 20px; 
+    margin-left: 645px;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.dropdown {
+    width: 300px; 
+    height: 45px;
+    margin: 30px; 
+    text-align: center;
+}
+
+.dropdown ul {
+    display: none;
+}
+
+.dropdown ul li {
+    color: lightslategray;
+    text-align: left;
+}
+
+.dropdown ul.show {
+    display: block;    
+}
+
+button {
+    background-color: rgb(132, 189, 225);
+    color: white; 
+    border: none; 
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer; 
+    border-radius: 20px; 
+}
+
+button:hover {
+    background-color: rgb(82, 146, 186); 
+}
+
+.menu {
+    width: 150px;
+    height: 90%;
+    background-color: rgb(135, 156, 170);
+    position: fixed;
+    overflow-y: scroll;
+    margin-left: 20px;
+    border-radius: 80px;
+    margin-top: 30px;
+    overflow: hidden;
+}
+
+.menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu li {
+    padding: 50px;
+}
+
+.menu li a {
+    color: #fff1c4;
+    text-decoration: none;
+    display: block;
+}
+
+.menu li:hover {
+    background-color: #6b7387;
+}
+
+.main-content {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+   justify-content: center;
+}
+
+.main-content img{
+   width: 800px;
+   height: auto;
+}
+
+.space {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; 
+}
+
+.redirect {
+    margin: 20px;
+}
+
+.tools {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tool-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tool-item img {
+    width: 160px; 
+    margin-bottom: 10px; 
+}
+
+.tool-item button {
+    width: fit-content;
+}
